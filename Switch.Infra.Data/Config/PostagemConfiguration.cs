@@ -11,6 +11,7 @@ namespace Switch.Infra.Data.Config
             builder.HasKey(c => c.Id);
             builder.Property(c => c.DataPublicacao).IsRequired();
             builder.Property(c => c.Texto).HasMaxLength(500).IsRequired();
+            builder.HasOne(c => c.Usuario);
         }
     }
 }
