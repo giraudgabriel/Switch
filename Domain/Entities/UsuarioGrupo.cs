@@ -1,12 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Switch.Domain.Entities
 {
-    public class Postagem
+    public class UsuarioGrupo
     {
-        public int Id { get; set; }
-        public DateTime DataPublicacao { get; set; } = DateTime.Now;
-        public string Texto { get; set; }
+        public DateTime DataCriacao { get; set; } = DateTime.Now;
+        public bool UsuarioAdministrador { get; set; }
         public int UsuarioId { get; set; }
         public virtual Usuario Usuario { get; set; }
         public int GrupoId { get; set; }
